@@ -13,6 +13,7 @@ repositories {
 }
 
 dependencies {
+    testCompile("org.springframework.boot:spring-boot-starter-test") // test compile
     compile('mysql:mysql-connector-java')
     compile('org.projectlombok:lombok')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
