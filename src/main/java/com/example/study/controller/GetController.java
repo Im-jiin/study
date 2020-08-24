@@ -1,5 +1,6 @@
 package com.example.study.controller;
 
+import com.example.study.model.SearchParam;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,10 +20,14 @@ public class GetController {
         return id+password;
     }
 
-   // public String getMeltiParameter(@RequestParam String account,
-   //                                 @RequestParam String email,
-   //                                 @RequestParam int Page){
-//
- //   }
+    @GetMapping("/getMultiParameter")
+   public SearchParam getMeltiParameter(SearchParam searchParam){
+
+        System.out.println(searchParam.getAccount());
+        System.out.println(searchParam.getEmail());
+        System.out.println(searchParam.getPage());
+
+        return searchParam;
+    }
 
 }
